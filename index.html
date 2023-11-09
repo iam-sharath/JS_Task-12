@@ -4,40 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="\">
-    <input text="username" placeholder="Enter Your Email" id="name">
-    <input text="Password" placeholder="Enter Your Password"><br>
-    <input text="MobileNumber" placeholder="Enter  Mobile Number">
-    <input type="submit" value="Submit">
-    </form>
-
-
-
-
-    <script>
-        let form = document.forms;
-        console.log(form[0])
-        let arr=[];
-        form[0].addEventListener("button",(e)=>{
-            e.preventDefault();
-            let input1=document.getElementById("name");
-            console.log(input1.value)
-            let username = e.target[0].value
-            let Password = e.target[1].value
-            let mobileNumber = e.target[2].value
-
-            let obj = {
-                user : username,
-                Pass:Password,
-                mobile:mobileNumber
-            }
-            console.log(obj);
-            arr.push(obj)
-
-        })
-
-    </script>
+      <div class="login-container">
+        <h2>Login</h2>
+        <form id="form">
+          <input type="text" id="username" placeholder=" Enter Username" required>
+          <input type="password" id="password" placeholder="Enter Password" required>
+          <input type="number" id="mobile" placeholder="Enter Mobile Number" required>
+          <button type="submit">Submit</button>
+        </form>
+        <div id="error"></div>
+      </div>
+      <script src="script.js"></script>
 </body>
 </html>
